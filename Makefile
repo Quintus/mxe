@@ -1,7 +1,7 @@
 # This file is part of MXE.
 # See index.html for further information.
 
-JOBS               := 1
+JOBS               := 4
 TARGET             := i686-pc-mingw32
 SOURCEFORGE_MIRROR := freefr.dl.sourceforge.net
 PKG_MIRROR         := s3.amazonaws.com/mxe-pkg
@@ -182,7 +182,7 @@ $(PREFIX)/installed/$(1): $(TOP_DIR)/src/$(1).mk \
 	    ,)
 	@touch '$(LOG_DIR)/$(TIMESTAMP)/$(1)'
 	@ln -sf '$(TIMESTAMP)/$(1)' '$(LOG_DIR)/$(1)'
-	@if ! (time $(MAKE) -f '$(MAKEFILE)' 'build-only-$(1)') &> '$(LOG_DIR)/$(TIMESTAMP)/$(1)'; then \
+	@if ! (time $(MAKE) -f '$(MAKEFILE)' 'build-only-$(1)'); then \
 	    echo; \
 	    echo 'Failed to build package $(1)!'; \
 	    echo '------------------------------------------------------------'; \
