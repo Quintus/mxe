@@ -3,10 +3,10 @@
 
 PKG             := libpng
 $(PKG)_IGNORE   :=
-$(PKG)_CHECKSUM := e8a41ffbf62b455e48dc2a50f59071395f95cb4b
+$(PKG)_CHECKSUM := 1546bc927e4971c6b579933d0266ffd01a97134f
 $(PKG)_SUBDIR   := libpng-$($(PKG)_VERSION)
 $(PKG)_FILE     := libpng-$($(PKG)_VERSION).tar.xz
-$(PKG)_URL      := ftp://ftp.simplesystems.org/pub/$(PKG)/png/src/libpng16/$($(PKG)_FILE)
+$(PKG)_URL      := ftp://ftp.simplesystems.org/pub/$(PKG)/png/src/libpng15/$($(PKG)_FILE)
 $(PKG)_DEPS     := gcc zlib
 
 define $(PKG)_UPDATE
